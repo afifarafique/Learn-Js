@@ -40,4 +40,31 @@ for (const key in name1) {
     console.log(name1[key]);
 }
 
+
+//high order array loop
+
+const names = ["Afifa","Ayesha","Alizba","Ayeza"]
+names.forEach(function(val){
+    console.log(val);
+})
  
+
+
+const newCode=[
+    {
+        languageName :"javascrippt",
+        languageFileName : "js"
+    },
+    {
+         languageName :"java",
+        languageFileName : "java"
+    },
+    {
+         languageName :"python",
+        languageFileName : "py"
+    }
+]
+
+newCode.forEach((item) =>{
+     console.log(item.languageFileName)
+})
