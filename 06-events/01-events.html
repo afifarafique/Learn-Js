@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body style="background-color: black;">
+    <h2>Images</h2>
+    <div>
+        <ul id="image">
+            <li><img width="200px" id="hills" src="pexels-eleanore-stohner-59233298-27350195.jpg" alt=""></li>
+            <li><img width="200px" id="snow" src="pexels-razone-gn-598584859-17180127.jpg" alt=""></li>
+            <li><img width="200px" id="river" src="pexels-souvenirpixels-417074.jpg" alt=""></li>
+            <li><a style="color:aliceblue" href="https://google.com" id="google">Google</a></li>
+        </ul> 
+    </div>
+</body>
+//javascript is sequencially run languauge
+<script>
+        // document.getElementById('snow').onclick = function(){
+        //     alert("snow")
+        // } 
+
+        //best approach
+        // document.getElementById('snow').addEventListener('click',function(e){
+        //    console.log(e)
+        // },false)
+        //alertEvent()      //it is used earlier
+
+        //propagation
+        // document.getElementById('image').addEventListener('click',function(e){
+        //    console.log("click inside the ul")
+        // }, false)
+        // document.getElementById('river').addEventListener('click',function(e){
+        //    console.log("river click")
+        //    e.stopPropagation()
+        // }, false)
+
+
+        // document.getElementById('Google').addEventListener
+        // ('click',function(e){
+        //    e.preventDefault()
+        //    e.stopPropagation()
+        //    console.log("google click");
+        // }, false)
+
+        //project style Activities
+       //for example we want that when we click on the image it  disappear 
+
+       document.querySelector('#image').addEventListener
+       ('click',function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagNamev === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt)      //another method for remove
+       })
+</script>
+</html>
+
+
+
+
+
