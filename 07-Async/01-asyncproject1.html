@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First Async Project</h1>
+    <button id="btn">Stop</button>
+</body>
+<script>
+    const sayAfifa = function(){
+        console.log("Afifa");
+    }
+    const Changetext = function(){
+    document.querySelector('h1').
+    innerHTML="best Js series"
+    }
+   const changeme =  setTimeout(Changetext,2000)
+   document.querySelector('#btn').
+   addEventListener('click',function(){
+   clearTimeout(changeme)
+   console.log("STOPPED")
+   })
+    </script>
+</html>
+
+
+
+
+
+
