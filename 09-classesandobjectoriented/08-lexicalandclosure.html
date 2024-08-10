@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="blue">Blue</button>
+    <button id="red">Red</button>
+</body>
+<script>
+    //  function init(){
+    //     let name = "Mozilla";
+    //     function displayname() {
+    //         console.log(name);
+    //     }
+    //     displayname()
+    // }
+    // init();
+
+ //lexical scoping
+    // function outer(){
+    //     let username = "afifa"
+    //     function inner(){
+    //         console.log("inner",username);
+    //     }
+    //     function innertwo(){
+    //         console.log("innertwo",username);
+    //     }
+    //    inner()
+    //    innertwo()
+    // }
+    // outer()
+    // console.log("too outer",username); 
+
+  
+   
+</script>
+<script>
+   document.getElementById("blue").onclick = function(){
+    document.body.style.backgroundColor='blue'
+   }
+   document.getElementById("red").onclick = function(){
+    document.body.style.backgroundColor='red'
+   }
+
+   function clickHandler(color){
+    // document.body.style.backgroundColor=`${color}`
+
+   return function(){
+        document.body.style.backgroundColor =`${color}`
+    }
+   }
+   document.getElementById('blue').onclick = clickHandler("blue")
+   document.getElementById('red').onclick = clickHandler("red")
+
+</script>
+</html>
